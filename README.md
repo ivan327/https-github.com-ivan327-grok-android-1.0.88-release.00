@@ -489,16 +489,26 @@ gradle/wrapper/*
 C – «Я всё сам загружу» – используйте пошаговые команды выше.
 D – «Сделайте репозиторий публичным / добавьте меня как коллаборатора», и я сразу выполню
 push_files
-
-.
-Пожалуйста, уточните, какой вариант вам удобнее, и я помогу дальше!
-
-
-user
-Enter user message...
-
-9 391 ms
-405
-T/s
-
-Add
+grok-android-1.0.88-release.00/
+├── LICENSE
+├── README.md
+├── .gitignore
+├── settings.gradle.kts
+├── build.gradle.kts
+├── gradlew
+├── gradlew.bat
+├── gradle/
+│   └── wrapper/
+│       └── gradle-wrapper.properties
+├── app/
+│   ├── build.gradle.kts
+│   └── src/
+│       └── main/
+│           ├── AndroidManifest.xml
+│           └── java/com/example/grok/MainActivity.kt
+├── .github/
+│   └── workflows/
+│       ├── android-ci.yml
+│       └── pages.yml
+└── docs/
+    └── index.mdя
