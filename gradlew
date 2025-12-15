@@ -1,4 +1,37 @@
-#!/bin/sh
+#!/usr/bin/env bash
+
+##############################################################################
+##
+##  Gradle start up script for POSIX compatible systems
+##
+##############################################################################
+
+# Set project-specific environment variables here if needed
+# E.g., JAVA_HOME=/path/to/java
+
+# Determine the directory of the script
+DIR=$(dirname "$0")
+
+# Set the path to the wrapper JAR file
+WRAPPER_JAR="$DIR/gradle/wrapper/gradle-wrapper.jar"
+
+# Check if the wrapper JAR exists
+if [ ! -f "$WRAPPER_JAR" ]; then
+    echo "ERROR: Could not find the Gradle wrapper JAR file."
+    echo "Expected location: $WRAPPER_JAR"
+    exit 1
+fi
+
+# Define default JVM arguments (e.g., memory)
+DEFAULT_JVM_OPTS="-Xmx1024m -Dfile.encoding=UTF-8"
+
+# Check if JVM options are already set
+if [ -z "$JAVA_OPTS" ]; then
+    JAVA_OPTS="$DEFAULT_JVM_OPTS"
+fi
+
+# Execute the Gradle wrapper
+exec java $JAVA_OPTS -jar "$WRAPPER_JAR" "$@"#!/bin/sh
 
 #
 # Copyright © 2015 the original authors.
